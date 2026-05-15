@@ -17,11 +17,12 @@ import {
   LogOut,
   ChevronRight,
   Palette,
-  Menu
+  Menu,
+  Trash2
 } from 'lucide-react';
 
 // --- TYPES ---
-type LeadStatus = 'Entrada' | 'Qualificação' | 'Proposta' | 'Follow-up' | 'Fechamento' | 'Pagou' | 'Perdido';
+type LeadStatus = 'Entrada' | 'Qualificação' | 'Proposta' | 'Follow-up' | 'Fechamento' | 'Perdido';
 type EventType = 'Casamento' | 'Aniversário' | 'Formatura' | 'Corporativo' | 'Confraternização' | 'Outro';
 type AppTheme = 'orus-light' | 'north-dark';
 type Page = 'dashboard' | 'funil' | 'clientes' | 'agenda' | 'config';
@@ -160,7 +161,6 @@ const COLUMNS: { id: LeadStatus; title: string; headerColor?: string; titleColor
   { id: 'Proposta', title: 'Proposta' },
   { id: 'Follow-up', title: 'Follow-up' },
   { id: 'Fechamento', title: 'Fechamento' },
-  { id: 'Pagou', title: 'Pagou' },
   { id: 'Perdido', title: 'Perdido' },
 ];
 
@@ -189,7 +189,7 @@ const INITIAL_LEADS: Lead[] = [
     eventType: 'Corporativo',
     product: 'Pacote Bora Casar',
     source: 'WhatsApp',
-    status: 'Pagou',
+    status: 'Fechamento',
     estimatedValue: 3500,
     eventDate: '2026-06-20',
     eventTime: '08:00',
@@ -273,15 +273,15 @@ export default function App() {
   // Derived State (Metrics)
   const metrics = useMemo(() => {
     const totalNegociacao = leads
-      .filter(l => ['Entrada', 'Qualificação', 'Proposta', 'Follow-up', 'Fechamento'].includes(l.status))
+      .filter(l => ['Entrada', 'Qualificação', 'Proposta', 'Follow-up'].includes(l.status))
       .reduce((acc, l) => acc + (Number(l.estimatedValue) || 0), 0);
     
     const ganhosReais = leads
-      .filter(l => l.status === 'Pagou')
+      .filter(l => l.status === 'Fechamento')
       .reduce((acc, l) => acc + (Number(l.estimatedValue) || 0), 0);
 
-    const leadsPagos = leads.filter(l => l.status === 'Pagou').length;
-    const leadsFinalizados = leads.filter(l => ['Pagou', 'Perdido'].includes(l.status)).length;
+    const leadsPagos = leads.filter(l => l.status === 'Fechamento').length;
+    const leadsFinalizados = leads.filter(l => ['Fechamento', 'Perdido'].includes(l.status)).length;
     const taxaConversao = leadsFinalizados === 0 ? 0 : Math.round((leadsPagos / leadsFinalizados) * 100);
 
     const originsCount = leads.reduce((acc, l) => {
@@ -362,6 +362,12 @@ export default function App() {
     const newStatus = COLUMNS[newIndex].id;
     if (lead.status !== newStatus) {
       setLeads(prev => prev.map(l => l.id === id ? { ...l, status: newStatus, updatedAt: Date.now() } : l));
+    }
+  };
+
+  const handleDeleteLead = (id: string) => {
+    if (confirm('Tem certeza que deseja excluir este lead?')) {
+      setLeads(prev => prev.filter(l => l.id !== id));
     }
   };
 
@@ -580,7 +586,7 @@ export default function App() {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
                 <div className="bg-white/5 border border-white/10 dark:bg-[#161616] dark:border-[#333333] p-6 rounded-xl">
                   <p className="text-sm opacity-70 mb-2 uppercase tracking-wider font-semibold">Leads Ativos</p>
-                  <p className="text-3xl font-mono font-bold text-[#CBA14D]">{leads.filter(l => !['Pagou', 'Perdido'].includes(l.status)).length}</p>
+                  <p className="text-3xl font-mono font-bold text-[#CBA14D]">{leads.filter(l => !['Fechamento', 'Perdido'].includes(l.status)).length}</p>
                 </div>
                 <div className="bg-white/5 border border-white/10 dark:bg-[#161616] dark:border-[#333333] p-6 rounded-xl shadow-lg">
                   <p className="text-sm opacity-70 mb-2 uppercase tracking-wider font-semibold text-green-500">Ganhos (Pagos)</p>
@@ -662,7 +668,7 @@ export default function App() {
                           <p className="text-sm opacity-70">{lead.eventType} • {lead.product}</p>
                         </div>
                         <div className="flex flex-col items-start md:items-end gap-2">
-                           <span className={`px-2 py-1 text-xs font-bold rounded-md ${lead.status === 'Pagou' ? 'bg-green-500/20 text-green-500' : 'bg-white/10'}`}>
+                           <span className={`px-2 py-1 text-xs font-bold rounded-md ${lead.status === 'Fechamento' ? 'bg-green-500/20 text-green-500' : 'bg-white/10'}`}>
                              Status: {lead.status}
                            </span>
                            <a 
@@ -800,7 +806,16 @@ export default function App() {
                           <span className={themeClasses.cardBadge}>
                             {lead.eventType}
                           </span>
-                          <span className={themeClasses.cardTimeAgo}>HÁ {getTimeAgo(lead.updatedAt).toUpperCase()}</span>
+                          <div className="flex items-center gap-2">
+                            <span className={themeClasses.cardTimeAgo}>HÁ {getTimeAgo(lead.updatedAt).toUpperCase()}</span>
+                            <button 
+                              onClick={(e) => { e.stopPropagation(); handleDeleteLead(lead.id); }}
+                              className="text-gray-400 hover:text-red-500 transition-colors p-1"
+                              title="Excluir lead"
+                            >
+                              <Trash2 className="w-3 h-3" />
+                            </button>
+                          </div>
                         </div>
                         <h3 className={themeClasses.cardTitle}>{lead.name}</h3>
                         <p className={themeClasses.cardSubtitle} title={lead.product}>{lead.product}</p>
