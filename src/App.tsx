@@ -96,7 +96,32 @@ const THEMES = {
     modalCancelBtn: 'px-4 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-colors',
     modalSubmitBtn: 'px-6 py-2 rounded-lg text-sm font-bold bg-blue-600 text-white hover:bg-blue-700 transition-colors shadow-sm',
     
-    footer: 'h-8 bg-white border-t border-slate-200 px-6 flex items-center justify-between text-[10px] text-slate-500 flex-shrink-0'
+    footer: 'h-8 bg-white border-t border-slate-200 px-6 flex items-center justify-between text-[10px] text-slate-500 flex-shrink-0',
+    
+    dashboardCard: 'bg-white border border-slate-200 p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow',
+    dashboardCardLabel: 'text-sm text-slate-500 mb-2 uppercase tracking-wider font-semibold',
+    dashboardCardValue: 'text-3xl font-mono font-bold text-blue-600',
+    dashboardCardValueSuccess: 'text-3xl font-mono font-bold text-emerald-600',
+    dashboardMetricLabel: 'text-xs text-slate-500 mt-2',
+    dashboardCardSpecial: 'bg-white border border-emerald-200 p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow ring-1 ring-emerald-500/10',
+
+    agendaCard: 'bg-white border border-slate-200 p-4 rounded-xl flex flex-col md:flex-row md:items-center justify-between gap-4 shadow-sm hover:shadow-md transition-shadow',
+    agendaDateText: 'text-sm font-bold text-blue-600 capitalize',
+    agendaTimeBadge: 'bg-slate-100 px-2 py-0.5 rounded text-xs text-slate-500 font-mono border border-slate-200',
+    agendaStatusBadgePaid: 'px-2 py-1 text-xs font-bold rounded-md bg-emerald-50 text-emerald-600 border border-emerald-200',
+    agendaStatusBadgeNormal: 'px-2 py-1 text-xs font-bold rounded-md bg-slate-50 text-slate-600 border border-slate-200',
+    
+    configBase: 'bg-white border border-slate-200 p-6 rounded-xl shadow-sm',
+    configLabel: 'text-lg font-bold mb-2 text-slate-800',
+    configDesc: 'text-sm text-slate-500 mb-4',
+    configPlanBasic: 'bg-white border border-slate-200 p-6 rounded-xl flex flex-col shadow-sm',
+    configPlanPro: 'bg-blue-50 border border-blue-200 p-6 rounded-xl flex flex-col relative scale-[1.02] shadow-md ring-1 ring-blue-500/10',
+    configPlanEnterprise: 'bg-white border border-slate-200 p-6 rounded-xl flex flex-col shadow-sm',
+    
+    tableContainer: 'bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm',
+    tableHeader: 'bg-slate-50 text-xs uppercase text-slate-500',
+    tableRow: 'hover:bg-slate-50',
+    tableDivider: 'divide-y divide-slate-200'
   },
   'north-dark': {
     name: 'North Locações (Personalizado)',
@@ -148,7 +173,32 @@ const THEMES = {
     modalCancelBtn: 'px-4 py-2 rounded-lg text-sm font-medium text-[#DABF8A] hover:text-white hover:bg-[#111111] transition-colors',
     modalSubmitBtn: 'px-6 py-2 rounded-lg text-sm font-bold bg-[#CBA14D] text-[#111111] hover:bg-[#DABF8A] transition-colors shadow-[0_4px_15px_rgba(203,161,77,0.2)]',
 
-    footer: 'h-8 bg-[#0A0A0A] border-t border-[#333333] px-6 flex items-center justify-between text-[10px] text-[#DABF8A] flex-shrink-0'
+    footer: 'h-8 bg-[#0A0A0A] border-t border-[#333333] px-6 flex items-center justify-between text-[10px] text-[#DABF8A] flex-shrink-0',
+    
+    dashboardCard: 'bg-[#161616] border border-[#333333] p-6 rounded-xl',
+    dashboardCardLabel: 'text-sm opacity-70 mb-2 uppercase tracking-wider font-semibold text-gray-400',
+    dashboardCardValue: 'text-3xl font-mono font-bold text-[#CBA14D]',
+    dashboardCardValueSuccess: 'text-3xl font-mono font-bold text-green-500',
+    dashboardMetricLabel: 'text-xs opacity-50 mt-2 text-gray-400',
+    dashboardCardSpecial: 'bg-[#161616] border border-green-900/30 p-6 rounded-xl shadow-lg ring-1 ring-green-500/20',
+
+    agendaCard: 'bg-[#161616] border border-[#333333] p-4 rounded-xl flex flex-col md:flex-row md:items-center justify-between gap-4',
+    agendaDateText: 'text-sm font-bold text-[#CBA14D] capitalize',
+    agendaTimeBadge: 'bg-[#111] px-2 py-0.5 rounded text-xs text-gray-400 font-mono border border-[#333333]',
+    agendaStatusBadgePaid: 'px-2 py-1 text-xs font-bold rounded-md bg-green-500/20 text-green-500',
+    agendaStatusBadgeNormal: 'px-2 py-1 text-xs font-bold rounded-md bg-white/10 text-gray-300',
+
+    configBase: 'bg-[#161616] border border-[#333333] p-6 rounded-xl',
+    configLabel: 'text-lg font-bold mb-2 text-white',
+    configDesc: 'text-sm opacity-70 mb-4 text-gray-300',
+    configPlanBasic: 'bg-[#161616] border border-[#333333] p-6 rounded-xl flex flex-col',
+    configPlanPro: 'bg-[#CBA14D]/10 border border-[#CBA14D]/50 p-6 rounded-xl flex flex-col relative scale-[1.02] shadow-xl',
+    configPlanEnterprise: 'bg-[#161616] border border-[#333333] p-6 rounded-xl flex flex-col',
+    
+    tableContainer: 'bg-[#161616] border border-[#333333] rounded-xl overflow-hidden',
+    tableHeader: 'bg-black/40 text-xs uppercase opacity-70 text-gray-300',
+    tableRow: 'hover:bg-white/5 text-gray-200',
+    tableDivider: 'divide-y divide-white/5'
   }
 };
 
@@ -584,31 +634,31 @@ export default function App() {
             <div className="p-6 md:p-8 space-y-6">
               <h2 className="text-xl font-bold text-inherit mb-6">Visão Geral de Performance</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-                <div className="bg-white/5 border border-white/10 dark:bg-[#161616] dark:border-[#333333] p-6 rounded-xl">
-                  <p className="text-sm opacity-70 mb-2 uppercase tracking-wider font-semibold">Leads Ativos</p>
-                  <p className="text-3xl font-mono font-bold text-[#CBA14D]">{leads.filter(l => !['Fechamento', 'Perdido'].includes(l.status)).length}</p>
+                <div className={themeClasses.dashboardCard}>
+                  <p className={themeClasses.dashboardCardLabel}>Leads Ativos</p>
+                  <p className={themeClasses.dashboardCardValue}>{leads.filter(l => !['Fechamento', 'Perdido'].includes(l.status)).length}</p>
                 </div>
-                <div className="bg-white/5 border border-white/10 dark:bg-[#161616] dark:border-[#333333] p-6 rounded-xl shadow-lg">
-                  <p className="text-sm opacity-70 mb-2 uppercase tracking-wider font-semibold text-green-500">Ganhos (Pagos)</p>
-                  <p className="text-3xl font-mono font-bold text-green-500">{formatCurrency(metrics.ganhosReais)}</p>
-                  <p className="text-xs opacity-50 mt-2">{metrics.leadsPagos} negócios fechados</p>
+                <div className={themeClasses.dashboardCardSpecial}>
+                  <p className={`${themeClasses.dashboardCardLabel} !text-emerald-500 flex items-center`}>Ganhos (Pagos)</p>
+                  <p className={themeClasses.dashboardCardValueSuccess}>{formatCurrency(metrics.ganhosReais)}</p>
+                  <p className={themeClasses.dashboardMetricLabel}>{metrics.leadsPagos} negócios fechados</p>
                 </div>
-                <div className="bg-white/5 border border-white/10 dark:bg-[#161616] dark:border-[#333333] p-6 rounded-xl">
-                  <p className="text-sm opacity-70 mb-2 uppercase tracking-wider font-semibold">Conversão Geral</p>
-                  <p className="text-3xl font-mono font-bold">{metrics.taxaConversao}%</p>
+                <div className={themeClasses.dashboardCard}>
+                  <p className={themeClasses.dashboardCardLabel}>Conversão Geral</p>
+                  <p className={themeClasses.dashboardCardValue}>{metrics.taxaConversao}%</p>
                 </div>
-                <div className="bg-white/5 border border-white/10 dark:bg-[#161616] dark:border-[#333333] p-6 rounded-xl">
-                  <p className="text-sm opacity-70 mb-2 uppercase tracking-wider font-semibold">Valor em Pipeline</p>
-                  <p className="text-3xl font-mono font-bold text-[#CBA14D]">{formatCurrency(metrics.totalNegociacao)}</p>
+                <div className={themeClasses.dashboardCard}>
+                  <p className={themeClasses.dashboardCardLabel}>Valor em Pipeline</p>
+                  <p className={themeClasses.dashboardCardValue}>{formatCurrency(metrics.totalNegociacao)}</p>
                 </div>
               </div>
 
               <h3 className="text-lg font-bold text-inherit mb-4 mt-8 pt-4 border-t border-inherit/10">Origem dos Leads</h3>
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
                 {Object.entries(metrics.originsCount).sort((a,b) => b[1] - a[1]).map(([origin, count]) => (
-                  <div key={origin} className="bg-white/5 border border-white/10 dark:bg-[#161616] dark:border-[#333333] p-4 rounded-xl flex flex-col items-center justify-center">
-                    <p className="text-xl font-mono font-bold text-[#CBA14D]">{count}</p>
-                    <p className="text-xs font-semibold uppercase tracking-wider opacity-70 mt-1">{origin}</p>
+                  <div key={origin} className={`${themeClasses.dashboardCard} flex flex-col items-center justify-center`}>
+                    <p className={themeClasses.dashboardCardValue}>{count}</p>
+                    <p className={`${themeClasses.dashboardCardLabel} !mb-0 mt-2`}>{origin}</p>
                   </div>
                 ))}
               </div>
@@ -618,9 +668,9 @@ export default function App() {
           {activePage === 'clientes' && (
             <div className="p-6 md:p-8">
               <h2 className="text-xl font-bold text-inherit mb-6">Lista de Clientes (Fechamentos)</h2>
-              <div className="bg-white/5 border border-white/10 dark:bg-[#6E1B1B]/40 dark:border-[#CBA14D]/20 rounded-xl overflow-hidden">
+              <div className={themeClasses.tableContainer}>
                 <table className="w-full text-left text-sm">
-                  <thead className="bg-black/20 text-xs uppercase opacity-70">
+                  <thead className={themeClasses.tableHeader}>
                     <tr>
                       <th className="px-6 py-4">Cliente</th>
                       <th className="px-6 py-4">Evento</th>
@@ -628,13 +678,15 @@ export default function App() {
                       <th className="px-6 py-4 text-right">Valor</th>
                     </tr>
                   </thead>
-                  <tbody className="divide-y divide-white/5">
+                  <tbody className={themeClasses.tableDivider}>
                     {leads.filter(l => l.status === 'Fechamento').map(lead => (
-                      <tr key={lead.id} className="hover:bg-white/5">
+                      <tr key={lead.id} className={themeClasses.tableRow}>
                         <td className="px-6 py-4 font-medium">{lead.name}</td>
                         <td className="px-6 py-4">{lead.eventType}</td>
                         <td className="px-6 py-4">{lead.product}</td>
-                        <td className="px-6 py-4 text-right font-mono text-[#CBA14D]">{formatCurrency(lead.estimatedValue)}</td>
+                        <td className={`px-6 py-4 text-right font-mono ${appTheme === ' north-dark' ? 'text-[#CBA14D]' : 'text-blue-600 font-bold'}`}>
+                          {formatCurrency(lead.estimatedValue)}
+                        </td>
                       </tr>
                     ))}
                     {leads.filter(l => l.status === 'Fechamento').length === 0 && (
@@ -658,17 +710,17 @@ export default function App() {
                     const dateObj = new Date(`${lead.eventDate}T00:00:00`);
                     const formattedDate = new Intl.DateTimeFormat('pt-BR', { dateStyle: 'full' }).format(dateObj);
                     return (
-                      <div key={lead.id} className="bg-white/5 border border-white/10 dark:bg-[#161616] dark:border-[#333333] p-4 rounded-xl flex flex-col md:flex-row md:items-center justify-between gap-4">
+                      <div key={lead.id} className={themeClasses.agendaCard}>
                         <div>
                           <div className="flex items-center gap-3 mb-1">
-                            <span className="text-sm font-bold text-[#CBA14D] capitalize">{formattedDate}</span>
-                            {lead.eventTime && <span className="bg-[#111] px-2 py-0.5 rounded text-xs text-gray-400 font-mono">{lead.eventTime}</span>}
+                            <span className={themeClasses.agendaDateText}>{formattedDate}</span>
+                            {lead.eventTime && <span className={themeClasses.agendaTimeBadge}>{lead.eventTime}</span>}
                           </div>
                           <h3 className="text-lg font-bold">{lead.name}</h3>
                           <p className="text-sm opacity-70">{lead.eventType} • {lead.product}</p>
                         </div>
                         <div className="flex flex-col items-start md:items-end gap-2">
-                           <span className={`px-2 py-1 text-xs font-bold rounded-md ${lead.status === 'Fechamento' ? 'bg-green-500/20 text-green-500' : 'bg-white/10'}`}>
+                           <span className={lead.status === 'Fechamento' ? themeClasses.agendaStatusBadgePaid : themeClasses.agendaStatusBadgeNormal}>
                              Status: {lead.status}
                            </span>
                            <a 
@@ -698,17 +750,17 @@ export default function App() {
           {activePage === 'config' && (
             <div className="p-6 md:p-8 max-w-5xl mx-auto">
               <div className="flex items-center gap-3 mb-6">
-                <Settings className="w-6 h-6 text-[#CBA14D]" />
+                <Settings className={`w-6 h-6 ${appTheme === ' north-dark' ? 'text-[#CBA14D]' : 'text-slate-500'}`} />
                 <h2 className="text-xl font-bold text-inherit">Configurações e Planos</h2>
               </div>
               
-              <div className="mb-12 bg-white/5 border border-white/10 dark:bg-[#161616] dark:border-[#333333] p-6 rounded-xl">
-                 <h3 className="text-lg font-bold mb-2">Aparência do CRM</h3>
-                 <p className="text-sm opacity-70 mb-4">Escolha como deseja visualizar seu painel de trabalho.</p>
+              <div className={`${themeClasses.configBase} mb-12`}>
+                 <h3 className={themeClasses.configLabel}>Aparência do CRM</h3>
+                 <p className={themeClasses.configDesc}>Escolha como deseja visualizar seu painel de trabalho.</p>
                  <div className="flex items-center gap-4">
                     <button 
                       onClick={() => setAppTheme('orus-light')}
-                      className={`px-4 py-2 rounded-lg font-bold text-sm transition-colors ${appTheme === 'orus-light' ? 'bg-blue-600 text-white' : 'bg-white/10 hover:bg-white/20'}`}
+                      className={`px-4 py-2 rounded-lg font-bold text-sm transition-colors ${appTheme === 'orus-light' ? 'bg-blue-600 text-white' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}`}
                     >
                       Padrão Orus (Claro)
                     </button>
@@ -725,47 +777,47 @@ export default function App() {
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {/* Plano Basic */}
-                <div className="bg-white/5 border border-white/10 dark:bg-[#161616] dark:border-[#333333] p-6 rounded-xl flex flex-col">
-                  <h4 className="text-lg font-bold text-inherit mb-1">Starter</h4>
-                  <p className="text-sm opacity-70 mb-4">Essencial para quem está começando</p>
-                  <p className="text-3xl font-bold font-mono text-[#CBA14D] mb-6">R$ 49<span className="text-sm font-sans opacity-50">/mês</span></p>
+                <div className={themeClasses.configPlanBasic}>
+                  <h4 className={themeClasses.configLabel}>Starter</h4>
+                  <p className={themeClasses.configDesc}>Essencial para quem está começando</p>
+                  <p className={`text-3xl font-bold font-mono mb-6 ${appTheme === 'north-dark' ? 'text-[#CBA14D]' : 'text-slate-800'}`}>R$ 49<span className="text-sm font-sans opacity-50">/mês</span></p>
                   <ul className="space-y-3 text-sm flex-1 mb-6">
-                     <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-[#CBA14D]"></div> Até 100 leads/mês</li>
-                     <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-[#CBA14D]"></div> Funil de Vendas Básico</li>
-                     <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-[#CBA14D]"></div> Integração com WhatsApp</li>
+                     <li className="flex items-center gap-2"><div className={`w-1.5 h-1.5 rounded-full ${appTheme === 'north-dark' ? 'bg-[#CBA14D]' : 'bg-slate-800'}`}></div> Até 100 leads/mês</li>
+                     <li className="flex items-center gap-2"><div className={`w-1.5 h-1.5 rounded-full ${appTheme === 'north-dark' ? 'bg-[#CBA14D]' : 'bg-slate-800'}`}></div> Funil de Vendas Básico</li>
+                     <li className="flex items-center gap-2"><div className={`w-1.5 h-1.5 rounded-full ${appTheme === 'north-dark' ? 'bg-[#CBA14D]' : 'bg-slate-800'}`}></div> Integração com WhatsApp</li>
                   </ul>
-                  <button className="w-full py-2 bg-white/10 hover:bg-white/20 rounded-lg font-bold transition-colors">Plano Atual</button>
+                  <button className={`w-full py-2 rounded-lg font-bold transition-colors ${appTheme === 'north-dark' ? 'bg-white/10 hover:bg-white/20 text-white' : 'bg-slate-100 hover:bg-slate-200 text-slate-800'}`}>Plano Atual</button>
                 </div>
                 
                  {/* Plano Pro */}
-                <div className="bg-blue-600/10 border border-blue-500/50 dark:bg-[#CBA14D]/10 dark:border-[#CBA14D]/50 p-6 rounded-xl flex flex-col relative scale-[1.02] shadow-xl">
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-blue-600 dark:bg-[#CBA14D] text-white dark:text-[#111] px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
+                <div className={themeClasses.configPlanPro}>
+                  <div className={`absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider ${appTheme === 'north-dark' ? 'bg-[#CBA14D] text-[#111]' : 'bg-blue-600 text-white'}`}>
                     Mais Popular
                   </div>
-                  <h4 className="text-lg font-bold text-inherit mb-1">Pro</h4>
-                  <p className="text-sm opacity-70 mb-4">Para locadoras em crescimento acelerado</p>
-                  <p className="text-3xl font-bold font-mono text-blue-500 dark:text-[#CBA14D] mb-6">R$ 149<span className="text-sm font-sans opacity-50">/mês</span></p>
+                  <h4 className={themeClasses.configLabel}>Pro</h4>
+                  <p className={themeClasses.configDesc}>Para locadoras em crescimento acelerado</p>
+                  <p className={`text-3xl font-bold font-mono mb-6 ${appTheme === 'north-dark' ? 'text-[#CBA14D]' : 'text-blue-600'}`}>R$ 149<span className="text-sm font-sans opacity-50">/mês</span></p>
                   <ul className="space-y-3 text-sm flex-1 mb-6">
-                     <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-blue-500 dark:bg-[#CBA14D]"></div> Leads Ilimitados</li>
-                     <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-blue-500 dark:bg-[#CBA14D]"></div> Dashboards Avançados</li>
-                     <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-blue-500 dark:bg-[#CBA14D]"></div> Automação de E-mails</li>
-                     <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-blue-500 dark:bg-[#CBA14D]"></div> Agenda Integrada</li>
+                     <li className="flex items-center gap-2"><div className={`w-1.5 h-1.5 rounded-full ${appTheme === 'north-dark' ? 'bg-[#CBA14D]' : 'bg-blue-600'}`}></div> Leads Ilimitados</li>
+                     <li className="flex items-center gap-2"><div className={`w-1.5 h-1.5 rounded-full ${appTheme === 'north-dark' ? 'bg-[#CBA14D]' : 'bg-blue-600'}`}></div> Dashboards Avançados</li>
+                     <li className="flex items-center gap-2"><div className={`w-1.5 h-1.5 rounded-full ${appTheme === 'north-dark' ? 'bg-[#CBA14D]' : 'bg-blue-600'}`}></div> Automação de E-mails</li>
+                     <li className="flex items-center gap-2"><div className={`w-1.5 h-1.5 rounded-full ${appTheme === 'north-dark' ? 'bg-[#CBA14D]' : 'bg-blue-600'}`}></div> Agenda Integrada</li>
                   </ul>
-                  <button className="w-full py-2 bg-blue-600 dark:bg-[#CBA14D] dark:text-[#111] hover:brightness-110 rounded-lg font-bold transition-all shadow-lg text-white">Fazer Upgrade</button>
+                  <button className={`w-full py-2 rounded-lg font-bold transition-all shadow-lg text-white ${appTheme === 'north-dark' ? 'bg-[#CBA14D] text-[#111] hover:brightness-110' : 'bg-blue-600 hover:bg-blue-700'}`}>Fazer Upgrade</button>
                 </div>
 
                  {/* Plano Enterprise */}
-                 <div className="bg-white/5 border border-white/10 dark:bg-[#161616] dark:border-[#333333] p-6 rounded-xl flex flex-col">
-                  <h4 className="text-lg font-bold text-inherit mb-1">Enterprise</h4>
-                  <p className="text-sm opacity-70 mb-4">Personalização total para sua marca</p>
-                  <p className="text-3xl font-bold font-mono text-[#CBA14D] mb-6">R$ 499<span className="text-sm font-sans opacity-50">/mês</span></p>
+                 <div className={themeClasses.configPlanEnterprise}>
+                  <h4 className={themeClasses.configLabel}>Enterprise</h4>
+                  <p className={themeClasses.configDesc}>Personalização total para sua marca</p>
+                  <p className={`text-3xl font-bold font-mono mb-6 ${appTheme === 'north-dark' ? 'text-[#CBA14D]' : 'text-slate-800'}`}>R$ 499<span className="text-sm font-sans opacity-50">/mês</span></p>
                   <ul className="space-y-3 text-sm flex-1 mb-6">
-                     <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-[#CBA14D]"></div> White-label (Seu Logo e Cores)</li>
-                     <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-[#CBA14D]"></div> Multi-usuários e Permissões</li>
-                     <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-[#CBA14D]"></div> API Aberta</li>
-                     <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-[#CBA14D]"></div> Controle de Estoque de Locação</li>
+                     <li className="flex items-center gap-2"><div className={`w-1.5 h-1.5 rounded-full ${appTheme === 'north-dark' ? 'bg-[#CBA14D]' : 'bg-slate-800'}`}></div> White-label (Seu Logo e Cores)</li>
+                     <li className="flex items-center gap-2"><div className={`w-1.5 h-1.5 rounded-full ${appTheme === 'north-dark' ? 'bg-[#CBA14D]' : 'bg-slate-800'}`}></div> Multi-usuários e Permissões</li>
+                     <li className="flex items-center gap-2"><div className={`w-1.5 h-1.5 rounded-full ${appTheme === 'north-dark' ? 'bg-[#CBA14D]' : 'bg-slate-800'}`}></div> API Aberta</li>
+                     <li className="flex items-center gap-2"><div className={`w-1.5 h-1.5 rounded-full ${appTheme === 'north-dark' ? 'bg-[#CBA14D]' : 'bg-slate-800'}`}></div> Controle de Estoque de Locação</li>
                   </ul>
-                  <button className="w-full py-2 bg-white/10 hover:bg-white/20 rounded-lg font-bold transition-colors">Falar com Consultor</button>
+                  <button className={`w-full py-2 rounded-lg font-bold transition-colors ${appTheme === 'north-dark' ? 'bg-white/10 hover:bg-white/20 text-white' : 'bg-slate-100 hover:bg-slate-200 text-slate-800'}`}>Falar com Consultor</button>
                 </div>
               </div>
             </div>
