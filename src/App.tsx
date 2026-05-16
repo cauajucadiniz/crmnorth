@@ -18,7 +18,8 @@ import {
   ChevronRight,
   Palette,
   Menu,
-  Trash2
+  Trash2,
+  Triangle
 } from 'lucide-react';
 
 // --- TYPES ---
@@ -463,7 +464,7 @@ export default function App() {
             </>
           ) : (
             <>
-              <div className={themeClasses.sidebarLogoIcon}>O</div>
+              <Triangle className="w-8 h-8 text-blue-600 fill-blue-600" />
               <span className={themeClasses.sidebarLogoText}>Orus CRM</span>
             </>
           )}
